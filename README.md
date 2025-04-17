@@ -35,4 +35,4 @@ LIMIT 1;
 ```
 
 > **Insight:**  
-> The Toyota Tacoma offers the highest horsepower-to-price ratio at 12.32 HP per thousand, making it the best value for power in this dataset. It's a **Car** type, suggesting that for every $1,000 spent, you get 12.32 horsepower.
+> The Toyota Tacoma offers the highest horsepower-to-price ratio at 12.32 HP per thousand, making it the best value for power in this dataset. It's a Car type, suggesting that for every $1,000 spent, you get 12.32 horsepower.
