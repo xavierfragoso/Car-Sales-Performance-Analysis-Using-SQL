@@ -1,38 +1,27 @@
-# Car Sales Performance Analysis Using SQL
-
-## Project Overview
-This project explores car sales data using SQL to analyze relationships between horsepower, price, and vehicle type. The data was imported into MySQL Workbench from a CSV file.
+# Product Sales Analysis Using MySQL
 
 ## Tools Used
 - MySQL Workbench
-- SQL
 - CSV dataset
 
 ## Key Question & Insight
 
-### Q: What is the average horsepower and price for each vehicle type?
+### Q: Find the product_id's of products where the total quantity sold is greater than the average total quantity sold of all products that have a total sales amount (quantity × price) greater than $10,000
 
 ```sql
-SELECT Vehicle_type, 
-       AVG(Horsepower) AS Avg_Horsepower, 
-       AVG(Price_in_thousands) AS Avg_Price
-FROM cars
-GROUP BY Vehicle_type;
+SELECT product_id, SUM(quantity) AS total_quantity
+FROM sales
+GROUP BY product_id
+HAVING SUM(quantity) > (
+    SELECT AVG(total_quantity)
+    FROM (
+        SELECT SUM(quantity) AS total_quantity
+        FROM sales
+        GROUP BY product_id
+        HAVING SUM(quantity * price) > 10000
+    ) AS sub
+);
 ```
 
 > **Insight:**  
-> Passenger vehicles have higher average horsepower (183.29) and price ($26.29k) compared to cars (176.62 HP, $24.10k), suggesting that higher horsepower vehicles tend to be priced higher.
-
-### Q: Which vehicle model has the highest horsepower-to-price ratio (HP per thousand)? What’s its vehicle type?
-
-```sql
-SELECT Model, 
-       Vehicle_type, 
-       Horsepower / Price_in_thousands AS hp_per_dollar
-FROM cars
-ORDER BY hp_per_dollar DESC
-LIMIT 1;
-```
-
-> **Insight:**  
-> The Toyota Tacoma offers the highest horsepower-to-price ratio at 12.32 HP per thousand, making it the best value for power in this dataset. It's a Car type, suggesting that for every $1,000 spent, you get 12.32 horsepower.
+> This query helps identify products that sell a larger volume of units compared to the average volume of products generating significant revenue (over $10,000 in total sales). By focusing on products with strong sales revenue, it filters out lower-performing items that might skew averages. This highlights volume leaders that may need priority in inventory management or marketing focus.
