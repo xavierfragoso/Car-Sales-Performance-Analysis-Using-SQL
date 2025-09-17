@@ -1,4 +1,4 @@
-# Product Sales Analysis Using MySQL
+# Hospital Revenue & Patient Analysis Using MySQL
 
 ## Tools Used
 - MySQL Workbench
@@ -6,22 +6,18 @@
 
 ## Key Question & Insight
 
-### Q: Find the product_id's of products where the total quantity sold is greater than the average total quantity sold of all products that have a total sales amount (quantity × price) greater than $10,000
+### Q: Which insurance providers generated the highest total billing amount in 2024, and how many unique patients did they cover?
 
 ```sql
-SELECT product_id, SUM(quantity) AS total_quantity
-FROM sales
-GROUP BY product_id
-HAVING SUM(quantity) > (
-    SELECT AVG(total_quantity)
-    FROM (
-        SELECT SUM(quantity) AS total_quantity
-        FROM sales
-        GROUP BY product_id
-        HAVING SUM(quantity * price) > 10000
-    ) AS sub
-);
+SELECT 
+    insurance_provider,
+    COUNT(DISTINCT Name) AS unique_patients,
+    SUM(billing_amount) AS total_billing
+FROM health
+WHERE YEAR(discharge_date) = 2024
+GROUP BY insurance_provider
+ORDER BY total_billing DESC;
 ```
 
 > **Insight:**  
-> This query helps identify products that sell a larger volume of units compared to the average volume of products generating significant revenue (over $10,000 in total sales). By focusing on products with strong sales revenue, it filters out lower-performing items that might skew averages. This highlights volume leaders that may need priority in inventory management or marketing focus.
+> This query identifies which insurance providers drove the most revenue for the hospital in 2024 while also showing how many patients they covered. Focusing on high-revenue providers helps hospital management understand which payers contribute most to overall revenue, and which patient populations are largest — useful for strategic planning, resource allocation, and negotiating contracts with insurance companies.
