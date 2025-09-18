@@ -47,6 +47,7 @@ HAVING SUM(billing_amount) > (
     ) AS patient_totals
 )
 ORDER BY total_billing DESC;
+```
 
 > **Insight:**  
 > This query identifies high-value patients whose billing exceeds the average patient billing amount in 2024. From a hospital’s perspective, these patients represent a disproportionate share of revenue and may be key for understanding utilization patterns or prioritizing care management.
