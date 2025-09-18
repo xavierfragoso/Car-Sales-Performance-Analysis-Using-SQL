@@ -1,4 +1,4 @@
-# Hospital Revenue & Patient Analysis Using MySQL
+# Healthcare Analytics Project
 
 ## Tools Used
 - MySQL Workbench
@@ -7,7 +7,7 @@
 
 ## Key Questions & Insights
 
-### Q1: Which insurance providers generated the highest total billing amount in 2024, and how many unique patients did they cover?
+### Question 1: Which insurance providers generated the highest total billing amount in 2024, and how many unique patients did they cover?
 
 ```sql
 SELECT 
@@ -23,10 +23,7 @@ ORDER BY total_billing DESC;
 > **Insight:**  
 > This query identifies which insurance providers drove the most revenue for the hospital in 2024 while also showing how many patients they covered. Focusing on high-revenue providers helps hospital management understand which payers contribute most to overall revenue, and which patient populations are largest — useful for strategic planning, resource allocation, and negotiating contracts with insurance companies.
 
-## Q2: Patients Above Average Billing
-
-### Business Question
-Which patients had a total billing amount greater than the average total billing across all patients in 2024?
+## Question 2: Which patients had a total billing amount greater than the average total billing across all patients in 2024?
 
 ### SQL Query
 ```sql
