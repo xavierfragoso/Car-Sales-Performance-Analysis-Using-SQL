@@ -9,6 +9,7 @@
 
 ### Business Question 1: Which insurance providers generated the highest total billing amount in 2024, and how many unique patients did they cover?
 
+### SQL Query
 ```sql
 SELECT 
     insurance_provider,
