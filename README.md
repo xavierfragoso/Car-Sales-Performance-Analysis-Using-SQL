@@ -84,3 +84,7 @@ ORDER BY doctor, patient_rank;
 
 > **Insight:**  
 > This query highlights the top 3 highest-billing patients for each doctor in 2024. By ranking patients within each doctor’s panel, hospitals can identify which individuals contribute most to revenue under specific physicians, uncovering patterns in patient case severity, resource utilization, and opportunities for targeted care management.
+
+## Tableau Dashboard
+
+View the interactive dashboard here: [Healthcare Revenue & Patient Insights (2024)](https://public.tableau.com/app/profile/xavier.fragoso/viz/HospitalAnalyticsDashboard_17580762106200/HealthcareRevenuePatientInsights2024)
