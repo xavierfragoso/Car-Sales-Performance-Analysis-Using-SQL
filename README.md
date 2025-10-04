@@ -5,6 +5,9 @@
 - CSV dataset
 - Tableau
 
+## Project Overview
+This project analyzes hospital billing and patient data to uncover key insights for revenue management and patient care optimization. Using SQL for data querying and Tableau for visualization, the project explores high-revenue insurance providers, identifies top-paying patients, and ranks patients by billing for each doctor. The goal is to provide actionable insights that can guide strategic decision-making, resource allocation, and targeted care management.
+
 ## Key Questions & Insights
 
 ### Business Question 1: Which insurance providers generated the highest total billing amount in 2024, and how many unique patients did they cover?
