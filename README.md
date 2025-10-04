@@ -6,7 +6,7 @@
 - Tableau
 
 ## Project Overview
-This project analyzes hospital billing and patient data to uncover key insights for revenue management and patient care optimization. Using SQL for data querying and Tableau for visualization, the project explores high-revenue insurance providers, identifies top-paying patients, and ranks patients by billing for each doctor. The goal is to provide actionable insights that can guide strategic decision-making, resource allocation, and targeted care management.
+Analyzed hospital billing data to identify high-revenue insurance providers, top-paying patients, and patient contributions by doctor. The project uses SQL and Tableau to provide actionable insights for revenue management and strategic care planning.
 
 ## Key Questions & Insights
 
