@@ -2,7 +2,7 @@
 
 ## Tools Used
 - MySQL Workbench
-- CSV dataset
+- CSV dataset from Kaggle
 - Tableau
 
 ## Project Overview
