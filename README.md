@@ -25,7 +25,7 @@ ORDER BY total_billing DESC;
 ```
 
 > **Insight:**  
-> This query identifies which insurance providers drove the most revenue for the hospital in 2024 while also showing how many patients they covered. Focusing on high-revenue providers helps hospital management understand which payers contribute most to overall revenue, and which patient populations are largest — useful for strategic planning, resource allocation, and negotiating contracts with insurance companies.
+> Identifies which insurance providers drove the most revenue in 2024 and how many patients they covered. This helps hospital leadership understand which payers contribute most to overall revenue and which patient populations are largest — valuable for strategic planning, resource allocation, and negotiating insurance contracts.
 
 ## Business Question 2: Which patients had a total billing amount greater than the average total billing across all patients in 2024?
 
@@ -51,7 +51,7 @@ ORDER BY total_billing DESC;
 ```
 
 > **Insight:**  
-> This query identifies high-value patients whose billing exceeds the average patient billing amount in 2024. From a hospital’s perspective, these patients represent a disproportionate share of revenue and may be key for understanding utilization patterns or prioritizing care management.
+> Identifies high-value patients whose billing exceeds the average. These patients represent a disproportionate share of revenue and can help hospitals understand utilization patterns, case severity, and opportunities for targeted care management.
 
 
 ## Business Question 3: Which patients generated the highest billing amounts for each doctor in 2024, and who are the top 3 patients per doctor?
@@ -86,7 +86,7 @@ ORDER BY doctor, patient_rank;
 ```
 
 > **Insight:**  
-> This query highlights the top 3 highest-billing patients for each doctor in 2024. By ranking patients within each doctor’s panel, hospitals can identify which individuals contribute most to revenue under specific physicians, uncovering patterns in patient case severity, resource utilization, and opportunities for targeted care management.
+> Reveals the top 3 highest-billing patients for each doctor. Ranking patients within each doctor’s panel highlights who contributes most to revenue, uncovering patterns related to case complexity, resource utilization, and opportunities for strategic care alignment.
 
 ## Tableau Dashboard
 
