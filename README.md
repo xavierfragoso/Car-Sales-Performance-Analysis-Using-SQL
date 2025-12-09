@@ -90,4 +90,4 @@ ORDER BY doctor, patient_rank;
 
 ## Tableau Dashboard
 
-View the interactive dashboard here: ([Hospital Revenue & Patient Insights (2024)]([https://public.tableau.com/app/profile/xavier.fragoso/viz/HospitalAnalyticsDashboard_17580762106200/HealthcareRevenuePatientInsights2024_1])
+View the interactive dashboard here:[Hospital Revenue & Patient Insights (2024)](https://public.tableau.com/app/profile/xavier.fragoso/viz/HospitalAnalyticsDashboard_17580762106200/HealthcareRevenuePatientInsights2024_1)
